@@ -337,6 +337,7 @@ li {
   flex-direction: column;
 }
 .cart__product {
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -474,6 +475,7 @@ li {
   gap: 5%;
 }
 .cart__details .btn-clear {
+  padding: 15px 2%;
   border: 1px solid #f00;
   background: #f00;
   color: #000;

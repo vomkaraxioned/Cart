@@ -5,6 +5,7 @@
   }
 
   &__product {
+    margin-bottom: 20px;
     @include flex(true);
 
     figure{
@@ -51,6 +52,7 @@
     gap: 5%;
 
     .btn-clear {
+      padding: 15px 2%;
       @include border(1px solid map.get($colors,"red"));
       @include clickable(map.get($colors,"red"),map.get($colors,"black"));
     }
