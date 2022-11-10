@@ -7,7 +7,7 @@
   <title>Shopping Cart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link rel="shortcut icon" href="favicon.ico" >
+  <link rel="shortcut icon" href="favicon.ico">
   <!--font-awesome link for icons-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
@@ -27,48 +27,33 @@
     <!--main section start-->
     <main>
       <section class="shopping">
-      <div class="wrapper">
-        <h2 class="shopping__title">search for product</h2>
-        <form action="#FIXME" name="search" class="shopping__search">
-          <div class="shopping__search__input">
-            <input type="text" name="search-input" placeholder="product name" >
-          </div>
-          <div class="shopping__search__submit">
-            <input type="submit" value="submit" name="search-submit" class="btn btn-search">
-          </div>
-        </form>
-        <ul class="shopping__products">
-          <li class="shopping__product">
-            <figure><img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="product"></figure>
-           <div class="shopping__product__details">
-            <h3 class="shopping__product__title">Fjallraven - Foldsack No. 1 Backpack</h3>
-            <span class="shopping__product__other-details"><span class="category">men's clothing</span><span class="rating">4.1(259 reviews)</span></span>
-            <p class="shopping__product__descriptions">Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</p>
-           </div>
-           <span class="price">price:147rs</span>
-           <button class="btn btn-add">Add to cart</button>
-          </li>
-        </ul>
-      </div>
+        <div class="wrapper">
+          <h2 class="shopping__title">search for product</h2>
+          <form action="#FIXME" name="search" class="shopping__search">
+            <div class="shopping__search__input">
+              <input type="text" name="search-input" placeholder="product name">
+            </div>
+            <div class="shopping__search__submit">
+              <input type="submit" value="submit" name="search-submit" class="btn btn-search">
+            </div>
+          </form>
+          <ul class="shopping__products">
+           <li class="dummy">loading wait.......</li>
+          </ul>
+        </div>
       </section>
 
       <section class="cart">
-        <ul class="cart__products">
-          <li class="cart__product">
-            <figure><img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="product"></figure>
-            <h3 class="cart__product__title">Fjallraven - Foldsack No. 1 Backpack</h3>
-            <div class="quantity">
-              <label for="quan">quantity</label>
-              <input type="number" name="quantity" id="quan" class="quantity">
-            </div>
-            <span class="price">170</span>
-            <button class="clear">remove</button>
-          </li>
-        </ul>
-        <p class="cart__details">
-          Subtotal: <span class="sub-total">1455</span>
-          <button class="btn btn-clear">clear</button>
-        </p>
+        <div class="wrapper">
+          <h2 class="cart__title">cart</h2>
+          <ul class="cart__products">
+            <li class="dummy">cart is empty</li>
+          </ul>
+          <p class="cart__details">
+            Subtotal: <span class="sub-total">1455</span>
+            <button class="btn btn-clear">clear</button>
+          </p>
+        </div>
       </section>
     </main>
     <!--main section end-->
