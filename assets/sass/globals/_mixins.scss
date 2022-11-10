@@ -1,0 +1,247 @@
+@mixin wrapper($suffix:null, $width:null) {
+  $class: wrapper;
+
+  @if $suffix {
+    $class : wrapper-#{$suffix};
+  }
+
+  .#{$class} {
+    width: $width;
+    margin: $autoMargin;
+  }
+}
+
+@mixin icon($content, $textIndent:null) {
+  font-family: 'FontAwesome';
+  font-weight: 900;
+
+  @if $textIndent {
+    float: right;
+    text-indent: 0;
+  }
+
+  content: $content;
+}
+
+@mixin flex($flex:null, $basis:null, $justify:null, $align:null, $direction:null, $wrap:null, $flexOrder:null) {
+  @if $flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  @if $align {
+    -webkit-box-align: $align;
+    -moz-box-align: $align;
+    -ms-flex-align: $align;
+    -webkit-align-items: $align;
+    align-items: $align;
+  }
+
+  @if $basis {
+    -ms-flex-preferred-size: $basis;
+    flex-basis: $basis;
+  }
+
+  @if $direction {
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    -o-flex-direction: $direction;
+
+    @if $direction==row {
+      -webkit-box-orient: horizontal;
+    }
+
+    @else {
+      -webkit-box-orient: vertical;
+    }
+
+    flex-direction: $direction;
+  }
+
+  @if $wrap {
+    -webkit-flex-wrap: $wrap;
+    -moz-flex-wrap: $wrap;
+    -ms-flex-wrap: $wrap;
+    -o-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+  }
+
+  @if $justify {
+    -webkit-justify-content: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+  }
+
+  @if $flexOrder {
+    -webkit-box-ordinal-group: $flexOrder;
+    -moz-box-ordinal-group: $flexOrder;
+    -ms-flex-order: $flexOrder;
+    -webkit-order: $flexOrder;
+    order: $flexOrder;
+  }
+}
+
+@mixin img($objFit) {
+  img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: $objFit;
+    object-fit: $objFit;
+    object-position: center;
+  }
+}
+
+@mixin contentSize($width:null, $height:null) {
+  @if $width {
+    width: $width;
+  }
+
+  @if $height {
+    height: $height;
+  }
+}
+
+@mixin display($display:null, $float:null, $overflow:null, $zIndex:null) {
+  @if $display {
+    display: $display;
+  }
+
+  @if $float {
+    float: $float;
+  }
+
+  @if $zIndex {
+    z-index: $zIndex;
+  }
+
+  @if $overflow {
+    overflow: $overflow;
+  }
+}
+
+@mixin position($position, $top:null, $right:null, $bottom:null, $left:null) {
+  position: $position;
+
+  @if $position {
+    @if $top {
+      top: $top;
+    }
+
+    @if $right {
+      right: $right;
+    }
+
+    @if $bottom {
+      bottom: $bottom;
+    }
+
+    @if $left {
+      left: $left;
+    }
+  }
+}
+
+@mixin font($color:null, $family:null, $size:null, $weight:null, $text:null, $textAlign:null) {
+  @if $color {
+    color: $color;
+  }
+
+  @if $family {
+    font-family: $family;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $textAlign {
+    text-align: $textAlign;
+  }
+
+  @if $text {
+    text-transform: $text;
+  }
+}
+
+@mixin border($border:null, $borderRadius:null) {
+  @if $border {
+    border: $border;
+  }
+
+  @if $borderRadius {
+    border-radius: $borderRadius;
+  }
+}
+
+@mixin prefix($property, $value) {
+  -moz-#{$property}: $value;
+  -webkit-#{$property}: $value;
+  -o-#{$property}: $value;
+  -ms-#{$property}: $value;
+  #{$propert}: $value;
+}
+
+@mixin transition($property:null, $time:null, $func:null) {
+  -webkit-transition: $property $time $func;
+  -moz-transition: $property $time $func;
+  -ms-transition: $property $time $func;
+  -o-transition: $property $time $func;
+  transition: $property $time $func;
+}
+
+@mixin breakpoint($min:null, $max:null) {
+  @if min and max {
+    @media screen and (min-device-width: $min) and (max-device-width: $max) {
+      @content;
+    }
+  }
+}
+
+@mixin responsive($device) {
+  @media only screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin reverseResponsive($device) {
+  @media only screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin background($color:null, $url:null, $rgba:null, $overlay:null) {
+  @if $url and $rgba and $overlay {
+    background: url($url) $rgba center no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+
+  @else if $url {
+    background: url($url) center no-repeat;
+    background-size: cover;
+  }
+
+  @else {
+    background: $color;
+  }
+}
+
+@mixin clickable($bgcolor, $color) {
+  background: $bgcolor;
+  color: $color;
+
+  @include reverseResponsive(1024px) {
+    &:hover {
+      background: $color;
+      color: $bgcolor;
+    }
+  }
+}
