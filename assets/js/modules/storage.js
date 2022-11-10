@@ -44,7 +44,6 @@ class Storage {
     this.storage = localStorage.getItem("mycart");
     let obj = JSON.parse(this.storage);
     obj.forEach((item)=>{
-      console.log(item);
      ProductCreator.addProduct(item);
     });
   }
