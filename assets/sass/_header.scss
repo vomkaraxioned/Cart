@@ -1,0 +1,10 @@
+@include wrapper($width:87%);
+
+.header {
+
+  &__title {
+    padding: 20px 0;
+    @include background($color:map.get($colors,"black"));
+    @include font(map.get($colors,"whiteShade"),$size:32px,$weight:900,$text:capitalize,$textAlign:center);
+  }
+}

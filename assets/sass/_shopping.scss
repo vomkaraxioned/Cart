@@ -1,0 +1,22 @@
+.shopping {
+  padding: 40px 0;
+
+  &__title {
+    @include font(map.get($colors,"blueShade"),$size:24px,$weight:900,$text:capitalize,$textAlign:center);
+  }
+
+&__search {
+  @include contentSize(80%);
+  margin: $autoMargin;
+  
+  @include flex(true);
+
+  &__search {
+    
+  }
+
+  &__submit {
+
+  }
+}
+}
