@@ -1,5 +1,10 @@
 .cart {
   padding: 20px 0;
+
+  &__title {
+    @include font(map.get($colors,"blueShade"),$size:24px,$weight:900,$text:capitalize,$textAlign:center);
+  }
+
   &__products {
     @include flex(true,$direction:column);
   }
@@ -57,4 +62,8 @@
       @include clickable(map.get($colors,"red"),map.get($colors,"black"));
     }
   }
+}
+
+.dummy {
+  @include font($textAlign:center,$size:21px,$text:capitalize);
 }
