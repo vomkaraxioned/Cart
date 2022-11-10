@@ -7,16 +7,87 @@
 
 &__search {
   @include contentSize(80%);
-  margin: $autoMargin;
-  
+  @include border(1px solid map.get($colors,"blueShade"),5px);
+  margin:20px auto 20px auto;
   @include flex(true);
 
-  &__search {
-    
+  input {
+    @include contentSize(90%);
+    padding: 10px 5%;
+    border: none;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__input {
+    @include flex(true,$basis:85%);
   }
 
   &__submit {
+    @include border(1px solid map.get($colors,"blueShade"));
+    @include position(relative);
+    flex: 1;
+    @include flex(true,$basis:15%);
+    
+    input {
+      width: 100%;
+      @include clickable (map.get($colors,"blueShade"),map.get($colors,"whiteShade"))
+    }
 
+    &::before {
+      @include position(absolute,10px,$left:10%);
+      @include flex(true,$justify:center,$align:center);
+      @include icon("\f002");
+    }
+  }
+}
+
+&__products {
+  @include flex(true,$direction:column);
+}
+
+&__product {
+  @include flex(true,$direction:column);
+
+  figure{
+    @include contentSize(40%,400px);
+    margin: 10px auto 10px auto;
+    @include flex(true);
+  }
+
+  &__title {
+    @include font(map.get($colors,"blueShade"),$size:21px,$weight:900,$text:capitalize,$textAlign:center);
+  }
+
+  &__other-details {
+    @include contentSize(100%);
+    @include flex(true);
+
+    .category {
+      @include flex(true,$basis:80%);
+      @include font($size:18px,$weight:900,$text:capitalize,$textAlign:center);
+    }
+
+    .rating {
+      @include flex(true,$basis:20%);
+      @include font(map.get($colors,"blueShade"),$size:18px,$weight:900,$text:capitalize,$textAlign:center);
+
+      &::before {
+        @include icon("\f005");
+        @include font(map.get($colors,"yellow"));
+      }
+    }
+  }
+  &__descriptions {
+    padding: 20px 0;
+    @include font($size:16px,$textAlign:center);
+  }
+
+  .price {
+    padding: 10px 0;
+    @include font(map.get($colors,"blueShade"),$size:18px,$weight:900,$text:capitalize,$textAlign:center);
   }
 }
 }
