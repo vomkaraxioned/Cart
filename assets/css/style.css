@@ -232,6 +232,7 @@ li {
   -o-flex-direction: column;
   -webkit-box-orient: vertical;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .shopping__product figure {
   width: 40%;
@@ -303,6 +304,185 @@ li {
   font-weight: 900;
   text-align: center;
   text-transform: capitalize;
+}
+.shopping__product .btn-add {
+  width: 10%;
+  padding: 10px 0;
+  border: 1px solid #345679;
+  margin: 0 auto;
+  background: #345679;
+  color: #ff0;
+}
+@media only screen and (min-width: 1024px) {
+  .shopping__product .btn-add:hover {
+    background: #ff0;
+    color: #345679;
+  }
+}
+
+.cart {
+  padding: 20px 0;
+}
+.cart__products {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+}
+.cart__product {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.cart__product figure {
+  height: 100px;
+  margin: 10px auto 10px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.cart__product figure img {
+  height: 100%;
+  object-fit: contain;
+}
+.cart__product__title {
+  color: #345679;
+  font-size: 21px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.cart__product .quantity {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.cart__product .quantity input:focus {
+  outline: none;
+}
+.cart__product .price {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.cart__product .clear {
+  height: 40px;
+  border: 1px solid #f00;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: capitalize;
+  background: #f00;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  .cart__product .clear:hover {
+    background: #000;
+    color: #f00;
+  }
+}
+.cart__details {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 5%;
+}
+.cart__details .btn-clear {
+  border: 1px solid #f00;
+  background: #f00;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  .cart__details .btn-clear:hover {
+    background: #000;
+    color: #f00;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

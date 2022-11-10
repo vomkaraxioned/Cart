@@ -50,6 +50,7 @@
 
 &__product {
   @include flex(true,$direction:column);
+  margin-bottom: 20px;
 
   figure{
     @include contentSize(40%,400px);
@@ -88,6 +89,14 @@
   .price {
     padding: 10px 0;
     @include font(map.get($colors,"blueShade"),$size:18px,$weight:900,$text:capitalize,$textAlign:center);
+  }
+
+  .btn-add {
+    @include contentSize(10%);
+    padding: 10px 0;
+    @include border(1px solid map.get($colors,"blueShade"));
+    margin: $autoMargin;
+    @include clickable(map.get($colors,"blueShade"),map.get($colors,"yellow"));
   }
 }
 }

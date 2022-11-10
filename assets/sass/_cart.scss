@@ -1,0 +1,58 @@
+.cart {
+  padding: 20px 0;
+  &__products {
+    @include flex(true,$direction:column);
+  }
+
+  &__product {
+    @include flex(true);
+
+    figure{
+      @include contentSize($height:100px);
+      margin: 10px auto 10px auto;
+      @include flex(trure,$basis:30%,$justify:center,$align:center);
+
+      img{
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  
+    &__title {
+      @include font(map.get($colors,"blueShade"),$size:21px,$weight:900,$text:capitalize,$textAlign:center);
+      @include flex(true,$basis:30%,$justify:center,$align:center);
+    }
+
+    .quantity {
+      @include flex(true,$basis:20%,$justify:center,$align:center);
+      input {
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .price {
+      @include flex(true,$basis:10%,$justify:center,$align:center);
+    }
+
+    .clear {
+      @include contentSize($height:40px);
+      @include border(1px solid map.get($colors,"red"));
+      margin: 20px auto;
+      @include flex(true,$basis:10%,$justify:center,$align:center);
+      @include font($size:18px,$weight:900,$text:capitalize,$textAlign:center);
+      @include clickable(map.get($colors,"red"),map.get($colors,"black"));
+    }
+  }
+
+  &__details {
+    @include flex(true,$justify:center,$align:center);
+    gap: 5%;
+
+    .btn-clear {
+      @include border(1px solid map.get($colors,"red"));
+      @include clickable(map.get($colors,"red"),map.get($colors,"black"));
+    }
+  }
+}
